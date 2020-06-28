@@ -1,0 +1,7 @@
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en
+Cookie: uuid=344c0843cf7d4809b0a6.1593234039.1.0.0; mtcdn=K
+Host: verify.meituan.com
+Referer: https://verify.meituan.com/v2/web/general_page?action=spiderindefence&requestCode=3be35fa456d84278830c19a9900a79f0&platform=1000&adaptor=auto&succCallbackUrl=https%3A%2F%2Foptimus-mtsi.meituan.com%2Foptimus%2FverifyResult%3ForiginUrl%3Dhttp%253A%252F%252Fmaoyan.com%252Ffilms%252F1250952
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36
+Accept-Encoding: gzip, deflate
