@@ -1,5 +1,6 @@
 import scrapy
 from lxml import etree
+# import lxml.etree
 from spiders.items import SpidersItem
 
 '''
