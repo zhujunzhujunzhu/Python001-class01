@@ -1,0 +1,30 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: 当前文件",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "httpbinspider",
+      "type": "python",
+      "request": "launch",
+      "module": "scrapy",
+      "args": ["crawl", "httpbinspider"],
+      // 切换到指定的目录下的 默认的直接是工作区的
+      "cwd": "${workspaceFolder}/practice/httpbin"
+    },
+    {
+      "name": "MaoyanScrapy",
+      "type": "python",
+      "request": "launch",
+      "module": "scrapy",
+      "args": ["crawl", "maoyanspider"],
+      // 切换到指定的目录下的 默认的直接是工作区的
+      "cwd": "${workspaceFolder}/zy1/spiders"
+    }
+  ]
+}
