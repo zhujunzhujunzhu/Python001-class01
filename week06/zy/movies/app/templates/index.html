@@ -3,7 +3,7 @@
  * @Autor 朱俊
  * @Date 2020-08-02 00:28:36
  * @LastEditors 朱俊
- * @LastEditTime 2020-08-02 23:45:16
+ * @LastEditTime 2020-08-03 07:33:47
 -->
 
 {% extends 'base.html' %}
@@ -43,11 +43,12 @@
             <span aria-hidden="true">&laquo;</span>
           </a>
         </li>
-        <li><a href="#">1</a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
+        <li>{{pages}}</li>
+        {% for page in pages %}
+        <li>
+          <a href="http://127.0.0.1:8000/app/{{page}}/">{{page}}</a>
+        </li>
+        {% endfor %}
         <li>
           <a href="#" aria-label="Next">
             <span aria-hidden="true">&raquo;</span>
@@ -81,4 +82,8 @@
     line-height: 2.34;
   }
 </style>
-{% endblock%}
+{% endblock%} {% block script%}
+<script>
+  // document.getElementsByClassName('')
+</script>
+{% endblock %}
