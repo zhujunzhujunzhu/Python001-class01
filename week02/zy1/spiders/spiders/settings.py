@@ -14,9 +14,9 @@ NEWSPIDER_MODULE = 'spiders.spiders'
 
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
-USER_AGENT = 'spiders (+http://www.yourdomain.com)'
+# USER_AGENT = 'spiders (+http://www.yourdomain.com)'
 #
-# USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'
+USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36'
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
@@ -63,6 +63,7 @@ HTTPPROXY_AUTH_ENCODING = 'http'
 HTTP_PROXY_LIST = [
     # "http://115.29.108.117:8118",
     "http://192.168.0.1:8080"
+    # "http://58.218.201.108:2690"
     # "http://52.179.231.206:80",
     # "http://95.0.194.241:9090"
 ]

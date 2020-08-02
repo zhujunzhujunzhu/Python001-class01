@@ -70,7 +70,7 @@ class SpidersPipeline:
             raise e
 
     def insert_db(self):
-        sql = 'insert into movies(id,name,type,time,short) values(%s,%s,%s,%s,%s);'
+        sql = 'insert into movies(id,name,type,grade,time,short) values(%s,%s,%s,%s,%s,%s);'
         temps = []
         for item in self.items:
             self.max_id += 1

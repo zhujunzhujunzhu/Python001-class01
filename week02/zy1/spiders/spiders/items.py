@@ -14,4 +14,5 @@ class SpidersItem(scrapy.Item):
     name = scrapy.Field()
     type = scrapy.Field()
     time = scrapy.Field()
+    grade = scrapy.Field()
     short = scrapy.Field()

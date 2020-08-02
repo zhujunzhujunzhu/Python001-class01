@@ -20,17 +20,25 @@ class MaoyanspiderSpider(scrapy.Spider):
         self.items = []
         html = etree.HTML(response.text)
         dls = html.xpath('//*/dd')
-        for dl in dls[:20]:
+        for dl in dls[10:]:
             name = dl.xpath(
                 './div[1]/div[2]/a/div/div[1]/span/text()')[0]
             type = dl.xpath(
                 './div[1]/div[2]/a/div/div[2]/text()')[1].strip()
             time = dl.xpath(
                 './div[1]/div[2]/a/div/div[4]/text()')[1].strip()
+            # //*[@id="app"]/div/div[2]/div[2]/dl/dd[1]/div[1]/div[2]/a/div/div[1]/span[2]
+            # //*[@id="app"]/div/div[2]/div[2]/dl/dd[1]/div[1]/div[2]/a/div/div[1]/span[2]/i[1]
+            integer = dl.xpath('./div[1]/div[2]/a/div/div[1]/span[2]/i[1]/text()')[
+                0]
+            fraction = dl.xpath(
+                './div[1]/div[2]/a/div/div[1]/span[2]/i[2]/text()')[0]
+            grade = f'{integer}{fraction}'
             href = dl.xpath("./div[1]/a/@href")[0]
             item = SpidersItem()
             item["name"] = name
             item["type"] = type
+            item["grade"] = grade
             item["time"] = time
             url = f'https://maoyan.com{href}'
             yield scrapy.Request(

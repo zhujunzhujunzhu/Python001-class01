@@ -1,0 +1,34 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Python: 当前文件",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "scanIpPortTCP",
+      "type": "python",
+      "request": "launch",
+      "program": "${file}",
+      // -n 10 -f tcp -ip 192.168.0.1 -w result.json
+      "args": [
+        "-n",
+        "10",
+        "-f",
+        "tcp",
+        "-ip",
+        "https://tech.suitbim.com",
+        "-w",
+        "result.json"
+      ]
+      // 切换到指定的目录下的 默认的直接是工作区的
+      // "cwd": "${workspaceFolder}/zy1/scan.py"
+    }
+  ]
+}
