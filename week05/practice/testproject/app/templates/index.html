@@ -1,0 +1,41 @@
+<!--
+ * @Description 
+ * @Autor 朱俊
+ * @Date 2020-08-02 00:28:36
+ * @LastEditors 朱俊
+ * @LastEditTime 2020-08-02 10:04:34
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <div>
+        {{msg}} test hello world
+      </div>
+      {% for item in list %}
+      <div>
+        {% if item.id != 2 %}
+        <div style="color: red;" id="list_{{item.id}}">{{ item.content }}</div>
+        {% endif %}
+      </div>
+      <div>
+        {% if item.id == 2 %}
+        <div style="color: blue;" id="list_{{item.id}}">{{ item.content }}</div>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
+<script>
+  window.onload = function () {
+    document.getElementById("list_1").style = `
+       background:yellow;
+    `;
+  };
+</script>

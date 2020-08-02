@@ -1,0 +1,23 @@
+<!--
+ * @Description 
+ * @Autor 朱俊
+ * @Date 2020-08-02 10:24:10
+ * @LastEditors 朱俊
+ * @LastEditTime 2020-08-02 15:23:45
+-->
+<!--模板的继承-->
+{% extends 'base.html' %}
+
+<!-- content区域重写 -->
+{% block content %}
+<div style="color: red;">
+  这个是content区域的重写的
+</div>
+<div style="border: 1px #ccc dashed; margin-top: 50px;">
+  <div>
+    这个是引用的页面
+  </div>
+  {% include 'index.html' %}
+</div>
+
+{% endblock %}
