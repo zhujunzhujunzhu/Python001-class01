@@ -1,6 +1,8 @@
 
+import abc
 
-class Animal():
+
+class Animal(metaclass=abc.ABCMeta):
     def __init__(self, type, shape, nature):
         self.type = type
         self.shape = shape
@@ -35,6 +37,7 @@ class Zoo(object):
 
 
 if __name__ == '__main__':
+    # a = Animal(1, 2, 3)
     # 实例化动物园
     z = Zoo('时间动物园')
     # 实例化一只猫，属性包括名字、类型、体型、性格

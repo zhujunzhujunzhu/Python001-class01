@@ -2,8 +2,8 @@
 @Description 
 @Autor 朱俊
 @Date 2020-07-17 12:33:52
-@LastEditors 朱俊
-@LastEditTime 2020-07-18 11:02:45
+LastEditors 朱俊
+LastEditTime 2020-08-16 13:56:37
 '''
 import pandas as pd
 import numpy as np
@@ -66,6 +66,7 @@ df = pd.DataFrame(
 )
 
 
+
 # 这里我能将pf转换为字典列表吗  我可以先通过遍历来进行实现的
 dict_list = []
 # index A　Ｂ　Ｃ D
@@ -81,3 +82,8 @@ print(dict_list)
 df.to_excel('practice/csv/test111.xls', index=False)
 # 导入需要依赖的模块是xlrd    这个还是很强大的  读出来的数据直接是DataFrame格式的
 excel = pd.read_excel('practice/csv/test111.xls')
+
+
+for item in iter(dict_list):
+    if '漫游' in item['内容']:
+        item['内容'].replace('漫游', '测试')

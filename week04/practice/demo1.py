@@ -82,7 +82,7 @@ pf = pd.DataFrame(data_dict, columns=['name', 'title'])
 c = [7, 8, 9]
 d = [9, 8, 7]
 data_dict1 = {'name': c, 'title': d}
-pf1 = pd.DataFrame(data_dict1, columns=['name', 'title'])
+pf1 = pd.DataFrame(data_dict1)
 
 
 c_pf = pd.concat([pf, pf1])
@@ -103,7 +103,7 @@ https://blog.csdn.net/qq_38251616/article/details/84752080
 loc 进行行定位 pf.loc(index) 依赖的是索引   
     进行列定位 pf.loc(:,'name') 依赖的是列名
     进行多行  定义多列  添加 :
-    可以认为它是根据行标签来的
+  
 
 iloc 利用自然行数来进行定位（依旧是从0开始的）  可以认为它是一个二维矩阵的定位  可以认为它是根据行索引来的
 ix 进行混合的定位  这个ix现在是不能使用了的？？ 被弃用的
