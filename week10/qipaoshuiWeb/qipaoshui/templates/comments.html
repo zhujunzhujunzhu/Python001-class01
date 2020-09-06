@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/echarts@4.9.0/dist/echarts.js"></script>
+    <title>舆情分析平台</title>
+  </head>
+  <body>
+    <div id="app" style="margin: 20px 20px">
+      <div class="table baseTable">
+        <el-table :data="list" border style="width: 100%">
+          <el-table-column prop="name" label="产品名称" width="500">
+          </el-table-column>
+          <el-table-column prop="comment_info" label="评论"> </el-table-column>
+          <el-table-column prop="sentiments" label="分析"> </el-table-column>
+        </el-table>
+      </div>
+    </div>
+    <script>
+      var list = {{ list|safe }}
+      var app = new Vue({
+        el: "#app",
+        data: {
+          baseUrl: 'http://127.0.0.1:8000/',
+           list:list
+        },
+        mounted() {
+        },
+        methods: {
+        }
+      });
+    </script>
+  </body>
+</html>
+<style>
+  .table {
+    width: 1000px;
+    margin: 50px auto;
+  }
+</style>
