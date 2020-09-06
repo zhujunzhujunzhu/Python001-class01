@@ -13,6 +13,14 @@
   </head>
   <body>
     <div id="app" style="margin: 20px 20px">
+      <div class="search-wrapper">
+        <el-input
+          v-model="key"
+          placeholder="请输入关键字"
+          @change="search"
+          clearable
+        ></el-input>
+      </div>
       <div class="table baseTable">
         <el-table :data="list" border style="width: 100%">
           <el-table-column prop="name" label="产品名称" width="500">
@@ -38,13 +46,21 @@
         el: "#app",
         data: {
           baseUrl: 'http://127.0.0.1:8000/',
-           list:list
+          list:list,
+          key:null
         },
         mounted() {
         },
         methods: {
           viewComments(row){
              window.location.href = this.baseUrl+'comments?good_id='+row.good_id
+          },
+          search(){
+            if(this.key && this.key.trim()){
+              this.list = list.filter(item=>item.name.indexOf(this.key)!='-1')
+            }else{
+              this.list = list
+            }
           }
         }
       });
@@ -52,6 +68,13 @@
   </body>
 </html>
 <style>
+  .search-wrapper {
+    width: 1000px;
+    margin: 50px auto;
+  }
+  .el-input {
+    width: 300px;
+  }
   .table {
     width: 1000px;
     margin: 50px auto;
